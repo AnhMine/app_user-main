@@ -3,16 +3,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-interface DetailProductDTO {
-  Id: number;
-  Size: string;
-  Price: number;
-  Quantity: number;
-  Gender: string;
-  Status: string;
-  ColorId: number;
-}
-
 
 
 const Index = () => {
