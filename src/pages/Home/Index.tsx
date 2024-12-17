@@ -71,7 +71,7 @@ const Index = () => {
       <section>
         <div>
           <img
-            src="/src/image/bg11.jpg"
+            src="./src/assets/img/bg-img/bg11.jpg"
             alt=""
             style={{ width: "100%", height: "500px", objectFit: "cover" }}
           />
