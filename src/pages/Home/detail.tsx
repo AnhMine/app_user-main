@@ -34,7 +34,7 @@ interface CategoryDetail {
 
 const Chitiet: React.FC = () => {
   const [products, setProducts] = useState<ProductDetail[]>([]);
-  const [category, setCategory] = useState<CategoryDetail | null>(null);
+  const [, setCategory] = useState<CategoryDetail | null>(null);
   const [images, setImages] = useState<ImageDtos[]>([]);
   const [imagePrimary, setImagePrimary] = useState<ImageDtos>({} as ImageDtos);
   const [loading, setLoading] = useState<boolean>(true);

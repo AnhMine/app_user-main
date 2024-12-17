@@ -49,14 +49,7 @@ const UserProfile: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0] || null;
-    setFormData((prev) => ({ ...prev, image: file }));
-  };
 
-  const imageUrl = formData.image
-    ? URL.createObjectURL(formData.image)
-    : user?.imageUrl;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

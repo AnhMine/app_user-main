@@ -9,7 +9,7 @@ const DonHangUse: React.FC = () => {
   const [order, setOrder] = React.useState<any[]>([]);
   const [customerInfo, setCustomerInfo] = useState<any | null>(null);
   const [filteredOrders, setFilteredOrders] = useState<any[]>([]);
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedOrderId, setSelectedOrderId] = useState<number | null>(null);
 
@@ -30,7 +30,7 @@ const DonHangUse: React.FC = () => {
           setOrder(response.data);
           filterOrdersByStatus();
         })
-        .catch((error) => {
+        .catch(() => {
           
         });
     }

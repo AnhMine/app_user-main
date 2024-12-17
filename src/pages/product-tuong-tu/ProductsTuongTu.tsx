@@ -3,30 +3,11 @@ import "./productTuongTu.scss";
 import axios from "axios";
 import Card_pro from "../Card_pro";
 
-interface DetailProductDTO {
-  Id: number;
-  Size: string;
-  Price: number;
-  Quantity: number;
-  Gender: string;
-  Status: string;
-  ColorId: number;
-}
 
-interface ProductDetail {
-  Id: number;
-  ProductName: string;
-  Description: string;
-  CategoryId: number;
-  BrandId: number;
-  Image: string;
-  BrandName: string;
-  details: DetailProductDTO[];
-}
 
 const ProductsTuongTu: React.FC<{ idCategory: number }> = ({ idCategory }) => {
   const [products, setProducts] = useState<ProductsUserDtos[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [, setLoading] = useState<boolean>(true);
 
   const fetchProducts = async () => {
     try {

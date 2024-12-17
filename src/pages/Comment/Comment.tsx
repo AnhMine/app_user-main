@@ -29,10 +29,7 @@ interface CommentDTO {
   };
 }
 
-interface RepoDTO {
-    items: CommentDTO[]
-    hisMore: boolean
-}
+
 const Comment = (props: {
   productId: number;
   productDetailId: number | undefined;
@@ -177,7 +174,7 @@ const Comment = (props: {
               <h3 className="h3-header-danhgia">Đánh giá</h3>
             </div>
         <ul className="ul-list-danhgia">
-          {comment.map((item, index) => (
+          {comment.map((item) => (
             <li className="li-item-danhgia">
               <div className="art-item-danhgia">
                 <div className="d-flex-item-danhgia">
@@ -192,7 +189,7 @@ const Comment = (props: {
                       {item?.account?.userName}
                       <span className="stars-rating">
                         {
-                          [...Array(item?.rating)].map((star, index) => (
+                          [...Array(item?.rating)].map((index) => (
                             <i
                               key={index}
                               className="ri-star-fill selected"

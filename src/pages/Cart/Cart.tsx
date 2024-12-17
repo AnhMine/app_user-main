@@ -33,7 +33,7 @@ interface CartItem {
 
 const Cart: React.FC = () => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const [order, setOrder] = useState<Order | null>(null);
+  const [, setOrder] = useState<Order | null>(null);
 
   useEffect(() => {
     const storedCart = localStorage.getItem("cart");

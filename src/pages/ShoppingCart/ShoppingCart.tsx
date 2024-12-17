@@ -39,7 +39,7 @@ interface CartItem {
 
 const GioHang: React.FC = () => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const [order, setOrder] = useState<Order | null>(null);
+  const [, setOrder] = useState<Order | null>(null);
   const [customerInfo, setCustomerInfo] = useState<any | null>(null);
   const [vouchers, setVouchers] = useState<any[]>([]);
   const [selectedVoucher, setSelectedVoucher] = useState<any | null>(null);
@@ -246,28 +246,6 @@ const GioHang: React.FC = () => {
     });
   };
 
-  const handleSubmit = async (idOrder: number) => {
-    // Dữ liệu từ các ô input
-    const model: CreateDeliveryAddress = {
-      address: address,
-      note: note,
-      phone: phoneNumber,
-    };
-
-    try {
-      const response = await axios.post(
-        `https://localhost:7048/api/DeliveryAddress/${idOrder}`,
-        model
-      );
-
-      
-    } catch (error) {
-      
-    }
-
-    // Xử lý logic tiếp theo tại đây (gửi API, kiểm tra dữ liệu, v.v.)
-  };
-
   const checkQuantityProducts = async () => {
     try {
       let product = undefined;
@@ -329,7 +307,6 @@ const GioHang: React.FC = () => {
       }
       setOrder(createdOrder);
       await addOrderDetails(createdOrder.orderId);
-      await handleSubmit(createdOrder.orderId);
       await sendEmail(createdOrder.orderId, customerInfo.accountId);
       alert("Đơn đặt mua hàng thành công!");
       location.reload();

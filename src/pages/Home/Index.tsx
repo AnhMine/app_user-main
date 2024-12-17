@@ -13,16 +13,7 @@ interface DetailProductDTO {
   ColorId: number;
 }
 
-interface ProductDetail {
-  Id: number;
-  ProductName: string;
-  Description: string;
-  CategoryId: number;
-  BrandId: number;
-  Image: string;
-  BrandName: string;
-  details: DetailProductDTO[];
-}
+
 
 const Index = () => {
   const navigate = useNavigate();

@@ -19,7 +19,7 @@ interface QRData {
 
 const QRCodeScanner: React.FC = () => {
   const [qrData, setQrData] = useState<QRData | null>(null);
-  const [scannerVisible, setScannerVisible] = useState<boolean>(true);
+  const [scannerVisible] = useState<boolean>(true);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   // Mở modal
@@ -32,8 +32,7 @@ const QRCodeScanner: React.FC = () => {
       const scanner = new Html5QrcodeScanner("reader", {
         qrbox: { width: 1200, height: 1200 },
         fps: 5,
-        verbose: true,
-      });
+      }, false);
 
       const success = (result: string | null) => {
         if (result) {
@@ -141,11 +140,6 @@ const QRCodeScanner: React.FC = () => {
         }
       };
 
-      const error = (err: any) => {
-        
-      };
-
-      scanner.render(success, error);
 
       return () => {
         scanner.clear();

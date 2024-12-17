@@ -168,19 +168,6 @@ const Login = () => {
     if (!validateSignup()) return;
     setIsLoading(true);
     try {
-      const response = await axios.post(
-        "https://localhost:7048/api/Login/register",
-
-        {
-          UserName: signupData.username,
-          Password: signupData.password,
-          Email: signupData.email,
-          Phone: signupData.phone,
-          FullName: signupData.fullname,
-          Address: signupData.address,
-          Role: 2,
-        }
-      );
       window.location.reload();
       navigate("/login");
 
