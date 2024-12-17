@@ -64,14 +64,14 @@ const Index = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading products...</div>;
+    return <div>Loading</div>;
   }
   return (
     <div>
       <section>
         <div>
           <img
-            src="./src/assets/img/bg-img/bg11.jpg"
+            src="/src/assets/img/bg-img/bg11.jpg"
             alt=""
             style={{ width: "100%", height: "500px", objectFit: "cover" }}
           />
@@ -189,7 +189,7 @@ const Index = () => {
                   }}
                 >
                   <img
-                    src="./src/assets/img/bg-img/1.jpg"
+                    src="/src/assets/img/bg-img/1.jpg"
                     alt=""
                     style={{
                       width: "100%",
@@ -374,27 +374,27 @@ const Index = () => {
       >
         {/* Brand Logo */}
         <div className="single-brands-logo">
-          <img src="./src/assets/img/core-img/1.png" />
+          <img src="/src/assets/img/core-img/1.png" />
         </div>
         {/* Brand Logo */}
         <div className="single-brands-logo">
-          <img src="./src/assets/img/core-img/2.png" />
+          <img src="/src/assets/img/core-img/2.png" />
         </div>
         {/* Brand Logo */}
         <div className="single-brands-logo">
-          <img src="./src/assets/img/core-img/3.png" />
+          <img src="/src/assets/img/core-img/3.png" />
         </div>
         {/* Brand Logo */}
         <div className="single-brands-logo">
-          <img src="./src/assets/img/core-img/4.png" />
+          <img src="/src/assets/img/core-img/4.png" />
         </div>
         {/* Brand Logo */}
         <div className="single-brands-logo">
-          <img src="./src/assets/img/core-img/5.png" />
+          <img src="/src/assets/img/core-img/5.png" />
         </div>
         {/* Brand Logo */}
         <div className="single-brands-logo">
-          <img src="./src/assets/img/core-img/6.png" />
+          <img src="/src/assets/img/core-img/6.png" />
         </div>
       </div>
       {/* ##### Brands Area End ##### */}
