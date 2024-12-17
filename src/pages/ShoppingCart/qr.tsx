@@ -18,12 +18,11 @@ interface QRData {
 }
 
 const QRCodeScanner: React.FC = () => {
-  const [qrData, setQrData] = useState<QRData | null>(null);
+  const [qrData] = useState<QRData | null>(null);
   const [scannerVisible] = useState<boolean>(true);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   // Mở modal
-  const openModal = () => setIsModalOpen(true);
 
   // Đóng modal
   const closeModal = () => setIsModalOpen(false);
