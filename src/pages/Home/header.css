@@ -1,0 +1,74 @@
+.user-login-info {
+    position: relative;
+}
+
+.user-login-info .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -50px;
+    /* Dịch menu con sang bên trái */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+
+    width: 200px;
+
+    padding: 5px 0;
+
+    z-index: 1000;
+    transition: all 0.3s ease;
+
+}
+
+.user-login-info .dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    /* Hiển thị rõ menu */
+    transform: translateY(0);
+    /* Hoạt ảnh dịch chuyển */
+}
+
+.user-login-info .dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.user-login-info .dropdown-menu ul li {
+    padding: 0;
+    /* Loại bỏ padding của li */
+    line-height: 1.5;
+    /* Điều chỉnh chiều cao dòng */
+}
+
+.user-login-info .dropdown-menu ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    /* Giữ kích thước chữ vừa phải */
+    display: block;
+    width: 100%;
+    padding: 0px 45px;
+    /* Giảm padding để chiều cao nút nhỏ hơn */
+    text-align: left;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.user-login-info .dropdown-menu ul li a:hover {
+    background-color: #f1f1f1;
+    /* Màu nền nhẹ hơn khi hover */
+    color: #000;
+    /* Tăng độ tương phản */
+    border-radius: 4px;
+    /* Bo góc khi hover */
+}
+
+.btn-see-more a {
+    margin-top: 5rem;
+    font-size: 20px;
+}

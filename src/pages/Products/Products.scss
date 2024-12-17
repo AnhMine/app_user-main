@@ -1,0 +1,141 @@
+$color-primary: #1951ac;
+$color-border: #ababab;
+@mixin reset-btn {
+  margin: 0px;
+  width: auto;
+  height: auto;
+  color: gray;
+  border: none;
+  border-radius: 0;
+  padding: 0px;
+}
+.bro {
+  border: 2px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+.container {
+  max-width: 90%;
+  & button {
+    @include reset-btn;
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+  }
+}
+
+.btn-name a {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  white-space: nowrap; /* Không xuống dòng */
+  overflow: hidden; /* Ẩn phần nội dung vượt quá */
+  text-overflow: ellipsis;
+}
+.list-products {
+  border: 1px solid #acacac91;
+  border-radius: 4px;
+  & .product-description {
+    padding: 15px 10px 20px 10px;
+    & .product-price {
+      font-size: 16px !important;
+    }
+    & .product-brad {
+      color: gray;
+      font-size: 16px;
+    }
+  }
+  & .add-to-cart-btn {
+    width: 100%;
+    margin-top: 20px;
+    & .essence-btn {
+      width: 100%;
+      border-radius: 4px;
+      background-color: #1951ac;
+      &:hover {
+        background-color: #02255d;
+      }
+    }
+  }
+}
+
+.container-filter {
+  border-right: 1px solid $color-border;
+  & button {
+    border-radius: 0;
+    border: 1px solid transparent;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 0;
+    &:hover {
+      color: black;
+      border-left: 3px solid $color-primary;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  & .btn-active {
+    color: black;
+    border-left: 3px solid $color-primary;
+  }
+  & .filer-content {
+    margin-top: 10px;
+    & h5 {
+      margin: 0;
+      border-top: 1px solid $color-border;
+      padding: 10px 0px;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+  }
+}
+.content-search {
+  width: 60%;
+  position: relative;
+  & input {
+    color: black;
+    text-align: left;
+    border: 1px solid $color-border;
+    padding: 5px 10px;
+    border-radius: 4px;
+    width: 100%;
+    &:focus {
+      outline: none;
+      border: 1px solid $color-primary;
+    }
+  }
+
+  & button {
+    @include reset-btn;
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    height: 100%;
+    font-size: 20px;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+.btn-see-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & button {
+    background: $color-primary;
+    color: white;
+    width: auto;
+    border-radius: 4px;
+    padding: 10px 50px;
+    margin-top: 5rem;
+    font-size: 15px;
+    &:hover {
+      background: #02255d;
+    }
+  }
+}
