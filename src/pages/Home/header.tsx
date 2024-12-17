@@ -117,7 +117,7 @@ export const Header = () => {
                 {user ? (
                   <p style={{ paddingTop: "19px" }}>{user}</p>
                 ) : (
-                  <img src="../../../src/assets/img/core-img/user.svg" alt="" />
+                  <img src="/assets/img/core-img/user.svg" alt="" />
                 )}
               </a>
               {user && isDropdownOpen && (
@@ -142,7 +142,7 @@ export const Header = () => {
             {/* Cart Area */}
             <div className="cart-area">
               <a href="/cart" id="essenceCartBtn">
-                <img src="../../../src/assets/img/core-img/bag.svg" alt="" />{" "}
+                <img src="/assets/img/core-img/bag.svg" alt="" />{" "}
               </a>
             </div>
           </div>

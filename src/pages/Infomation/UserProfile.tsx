@@ -90,7 +90,7 @@ const UserProfile: React.FC = () => {
       <h2>Thông Tin Cá Nhân</h2>
       <form onSubmit={handleSubmit}>
           <div className="avatar-preview">
-            <img src="/src/image/av.jpg" alt="" />
+            <img src="/image/av.jpg" alt="" />
           </div>
 
         <div className="form-group">

@@ -180,7 +180,7 @@ const Comment = (props: {
                 <div className="d-flex-item-danhgia">
                   <div className="d-flex-flex-col-img">
                     <img
-                      src="/src/image/av.jpg"
+                      src="/image/av.jpg"
                       className="img-flex-avata-user-danhgia"
                     ></img>
                   </div>
