@@ -19,7 +19,7 @@ const OrderDetail: React.FC<OrderDetailProps> = ({ orderId, onClose }) => {
       setError(""); // Reset error trước khi gọi API
       try {
         const response = await axios.get(
-          `https://localhost:7048/api/Order/${orderId}`
+          `https://cozastore.tryasp.net/api/Order/${orderId}`
         );
         setOrder(response.data);
         caculateFeeShip(response.data);
@@ -143,7 +143,7 @@ const OrderDetail: React.FC<OrderDetailProps> = ({ orderId, onClose }) => {
                       <img
                         src={
                           item.product.medias.length > 0
-                            ? `https://localhost:7048/${item.product.medias[0].link}`
+                            ? `https://cozastore.tryasp.net/${item.product.medias[0].link}`
                             : "/default-image.png"
                         }
                         alt={item.product.productName}

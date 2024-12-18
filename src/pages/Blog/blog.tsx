@@ -47,7 +47,7 @@ export const Blog = () => {
               <div className="col-12 col-lg-6">
                 <div className="single-blog-area mb-50">
                   <img
-                    src={`https://localhost:7048/${item.image}`}
+                    src={`https://cozastore.tryasp.net/${item.image}`}
                     className="img-blogs"
                     alt="hình ảnh"
                   />

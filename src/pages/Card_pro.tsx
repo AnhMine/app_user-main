@@ -41,7 +41,7 @@ const Card_pro: React.FC<CardProProps> = ({ product }) => {
 
       <div className="product-img" style={{ height: "20rem", overflow: "hidden" }}>
         <img
-          src={`https://localhost:7048/${product.imagePrimary}`}
+          src={`https://cozastore.tryasp.net/${product.imagePrimary}`}
           alt=""
           style={{
             width: "100%",

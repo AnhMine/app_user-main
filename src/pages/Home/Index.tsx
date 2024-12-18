@@ -19,7 +19,7 @@ const Index = () => {
   const fetchProducts = async () => {
     try {
       const response = await axios.get(
-        `https://localhost:7048/api/Products/get-user?maxPageSize=8&Pagesize=8`
+        `https://cozastore.tryasp.net/api/Products/get-user?maxPageSize=8&Pagesize=8`
       );
 
       const productsData = response.data.data; // Dữ liệu sản phẩm
@@ -34,7 +34,7 @@ const Index = () => {
   const getCategorys = async () => {
     try {
       const response = await axios.get(
-        "https://localhost:7048/api/Category/get-all-category?Pagesize=3"
+        "https://cozastore.tryasp.net/api/Category/get-all-category?Pagesize=3"
       );
       setCategorys(response.data.data);
     } catch (error) {
@@ -47,7 +47,7 @@ const Index = () => {
   const getProductsHotSale = async () => {
     try {
       const response = await axios.get(
-        "https://localhost:7048/api/Products/hot-sale-product"
+        "https://cozastore.tryasp.net/api/Products/hot-sale-product"
       );
       setHotSaleProducts(response.data);
     } catch (error) {
@@ -300,7 +300,7 @@ const Index = () => {
 
           <div className="product-img" style={{ height: "20rem", overflow: "hidden" }}>
             <img
-              src={`https://localhost:7048/${product.imagePrimary}`}
+              src={`https://cozastore.tryasp.net/${product.imagePrimary}`}
               alt=""
               style={{
                 width: "100%",

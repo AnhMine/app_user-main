@@ -27,7 +27,7 @@ const Products: React.FC = () => {
     }
     try {
       const response = await axios.get(
-        `https://localhost:7048/api/Products/get-user?maxPageSize=${
+        `https://cozastore.tryasp.net/api/Products/get-user?maxPageSize=${
           a * 16
         }&Pagesize=${a * 16}&PageNumber=1`
       );
@@ -73,7 +73,7 @@ const Products: React.FC = () => {
   const sortByBrand = async (brandId: number) => {
     try {
       const response = await axios.get(
-        `https://localhost:7048/api/Products/get-user?maxPageSize=${
+        `https://cozastore.tryasp.net/api/Products/get-user?maxPageSize=${
           numberPage * 16
         }&Pagesize=${numberPage * 16}&PageNumber=1`
       );
@@ -94,7 +94,7 @@ const Products: React.FC = () => {
   const sortByCategory = async (categoryId: number) => {
     try {
       const response = await axios.get(
-        `https://localhost:7048/api/Products/get-user?maxPageSize=${
+        `https://cozastore.tryasp.net/api/Products/get-user?maxPageSize=${
           numberPage * 16
         }&Pagesize=${numberPage * 16}&PageNumber=1`
       );
@@ -117,10 +117,10 @@ const Products: React.FC = () => {
     try {
       const [category, brand] = await Promise.all([
         axios.get(
-          "https://localhost:7048/api/Category/get-all-category?Pagesize=1000"
+          "https://cozastore.tryasp.net/api/Category/get-all-category?Pagesize=1000"
         ),
         axios.get(
-          "https://localhost:7048/api/Brand/get-all-brand?Pagesize=1000"
+          "https://cozastore.tryasp.net/api/Brand/get-all-brand?Pagesize=1000"
         ),
       ]);
       setBrands(brand.data.data);
@@ -143,7 +143,7 @@ const Products: React.FC = () => {
       const value = event.target.value;
       try {
         const response = await axios.get(
-          `https://localhost:7048/api/Products/get-user?maxPageSize=${
+          `https://cozastore.tryasp.net/api/Products/get-user?maxPageSize=${
             numberPage * 16
           }&Pagesize=${numberPage * 16}&PageNumber=1`
         );
@@ -308,7 +308,7 @@ const Products: React.FC = () => {
         </div>
         
         <img
-          src={`https://localhost:7048/${product.imagePrimary}`}
+          src={`https://cozastore.tryasp.net/${product.imagePrimary}`}
           alt="Hình sản phẩm"
           style={{
             width: '100%',
@@ -318,7 +318,7 @@ const Products: React.FC = () => {
         />
         <img
           className="hover-img"
-          src={`https://localhost:7048/${product.imagePrimary}`}
+          src={`https://cozastore.tryasp.net/${product.imagePrimary}`}
           style={{
             width: '100%',
             height: '20rem',

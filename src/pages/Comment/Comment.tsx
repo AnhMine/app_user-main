@@ -69,7 +69,7 @@ const Comment = (props: {
       detailProductId: props.productDetailId,
     };
     const response = await axios.post(
-      `https://localhost:7048/api/Comment/check-is-comment`,
+      `https://cozastore.tryasp.net/api/Comment/check-is-comment`,
       data
     );
     if (response) {
@@ -79,7 +79,7 @@ const Comment = (props: {
 
   const loadComment = async (newPageNumber: number) => {
     const response = await axios.get(
-      `https://localhost:7048/api/Comment/get_comment-by-productid/${props.productId}`,
+      `https://cozastore.tryasp.net/api/Comment/get_comment-by-productid/${props.productId}`,
       {
         params: {
           pageNumber: newPageNumber,
@@ -114,7 +114,7 @@ const Comment = (props: {
     }
     
     const response = await axios.post(
-      `https://localhost:7048/api/Comment/add-comment-inproduct`,
+      `https://cozastore.tryasp.net/api/Comment/add-comment-inproduct`,
       data
     );
     if (response) {

@@ -24,7 +24,7 @@ const DonHangUse: React.FC = () => {
 
       axios
         .get(
-          "https://localhost:7048/api/Order/get-by-user/" + parsedInfo.accountId
+          "https://cozastore.tryasp.net/api/Order/get-by-user/" + parsedInfo.accountId
         )
         .then((response) => {
           setOrder(response.data);

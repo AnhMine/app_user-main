@@ -12,7 +12,7 @@ const ProductsTuongTu: React.FC<{ idCategory: number }> = ({ idCategory }) => {
   const fetchProducts = async () => {
     try {
       const response = await axios.get(
-        `https://localhost:7048/api/Products/get-user?maxPageSize=8&Pagesize=8`
+        `https://cozastore.tryasp.net/api/Products/get-user?maxPageSize=8&Pagesize=8`
       );
       const productsData: any[] = response.data.data; // Dữ liệu sản phẩm
       const filteredProducts = productsData

@@ -63,7 +63,7 @@ const Chitiet: React.FC = () => {
     
 
     const repo = await axios.get(
-      `https://localhost:7048/api/Comment/get-rating-by-product-id/${id}`
+      `https://cozastore.tryasp.net/api/Comment/get-rating-by-product-id/${id}`
     );
 
     if (repo) {
@@ -82,11 +82,11 @@ const Chitiet: React.FC = () => {
   const fetchProductsAndCategory = async () => {
     try {
       const [productResponse, detailResponse, arrImage] = await Promise.all([
-        axios.get(`https://localhost:7048/api/Products/get-product/${id}`),
+        axios.get(`https://cozastore.tryasp.net/api/Products/get-product/${id}`),
         axios.get(
-          `https://localhost:7048/api/DetailProduct/get-detailproduct/${id}`
+          `https://cozastore.tryasp.net/api/DetailProduct/get-detailproduct/${id}`
         ),
-        axios.get(`https://localhost:7048/api/Medias/get-all-medias/${id}`),
+        axios.get(`https://cozastore.tryasp.net/api/Medias/get-all-medias/${id}`),
       ]);
 
       const productData = productResponse.data;
@@ -97,7 +97,7 @@ const Chitiet: React.FC = () => {
       setImages(arrImage.data);
       setImagePrimary(arrImage.data.find((a: ImageDtos) => a.isImage === true));
       const categoryResponse = await axios.get(
-        `https://localhost:7048/api/Category/get-category-by-id/${productData.categoryId}`
+        `https://cozastore.tryasp.net/api/Category/get-category-by-id/${productData.categoryId}`
       );
       const categoryData = categoryResponse.data;
 
@@ -197,7 +197,7 @@ const Chitiet: React.FC = () => {
       <div className="container-detail">
         <div className="container-detail-image">
           <div className="container-detail-image-main">
-            <img src={`https://localhost:7048/${imagePrimary.link}`} alt="" />
+            <img src={`https://cozastore.tryasp.net/${imagePrimary.link}`} alt="" />
           </div>
           <div className="container-detail-image-other">
             {images.map((item) =>
@@ -205,7 +205,7 @@ const Chitiet: React.FC = () => {
                 <img
                   onClick={() => changeImagePrimary(item)}
                   key={item.id} // Đảm bảo `key` duy nhất
-                  src={`https://localhost:7048/${item.link}`}
+                  src={`https://cozastore.tryasp.net/${item.link}`}
                   alt="hình ảnh"
                 />
               )

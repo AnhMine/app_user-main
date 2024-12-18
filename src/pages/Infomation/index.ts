@@ -25,7 +25,7 @@ export interface upprofile{
 
 export const getUserById = async (id: number): Promise<AccountDto | null> => {
   try {
-    const response = await axios.get<AccountDto>(`https://localhost:7048/api/Login/get-login-by-id/${id}`);
+    const response = await axios.get<AccountDto>(`https://cozastore.tryasp.net/api/Login/get-login-by-id/${id}`);
     return response.data;
   } catch (error) {
     
@@ -36,7 +36,7 @@ export const getUserById = async (id: number): Promise<AccountDto | null> => {
 export const UpProfile = async (id: number, data: FormData): Promise<upprofile | null> => {
   try {
     const response = await axios.put<upprofile>(
-      `https://localhost:7048/api/Login/up-profile/${id}`,
+      `https://cozastore.tryasp.net/api/Login/up-profile/${id}`,
       data,
       { headers: { "Content-Type": "multipart/form-data" } } // Đảm bảo header đúng với FormData
     );

@@ -32,7 +32,7 @@ const CancelButton = ({ orderId }: { orderId: string }) => {
 
     try {
       const response = await axios.put(
-        `https://localhost:7048/api/Order/UP-order/${orderId}`,
+        `https://cozastore.tryasp.net/api/Order/UP-order/${orderId}`,
         updateData,
         {
           headers: {

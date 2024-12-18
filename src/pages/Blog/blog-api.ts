@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL: string = "https://localhost:7048/api/Blog";
+const URL: string = "https://cozastore.tryasp.net/api/Blog";
 
 export const getAllBlog = async (): Promise<BlogDtos[]> => {
   try {

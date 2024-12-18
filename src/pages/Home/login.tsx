@@ -131,7 +131,7 @@ const Login = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "https://localhost:7048/api/Login/login",
+        "https://cozastore.tryasp.net/api/Login/login",
         {
           UserName: loginData.username,
           Password: loginData.password,
@@ -196,7 +196,7 @@ const Login = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "https://localhost:7048/api/Account/ForgotPassword",
+        "https://cozastore.tryasp.net/api/Account/ForgotPassword",
         {
           Email: signupData.email,
         }

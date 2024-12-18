@@ -58,7 +58,7 @@ const GioHang: React.FC = () => {
     const fetchVouchers = async () => {
       try {
         const response = await axios.get(
-          "https://localhost:7048/api/Voucher/get-all-vouchers"
+          "https://cozastore.tryasp.net/api/Voucher/get-all-vouchers"
         );
         // 
 
@@ -250,7 +250,7 @@ const GioHang: React.FC = () => {
     try {
       let product = undefined;
       const response: any = await axios.get(
-        "https://localhost:7048/api/DetailProduct/get-all-detailproduct?maxPageSize=10000&Pagesize=10000"
+        "https://cozastore.tryasp.net/api/DetailProduct/get-all-detailproduct?maxPageSize=10000&Pagesize=10000"
       );
       const products: Detail[] = response.data.data;
       for (let i = 0; i < cartItems.length; i++) {
@@ -294,7 +294,7 @@ const GioHang: React.FC = () => {
       };
 
       const response = await axios.post(
-        "https://localhost:7048/api/Order/add-order",
+        "https://cozastore.tryasp.net/api/Order/add-order",
         newOrder
       );
       const createdOrder = response.data;
@@ -319,7 +319,7 @@ const GioHang: React.FC = () => {
   const thanhToanVnpay = async (data: { id: number; amount: number }) => {
     try {
       const response = await axios.post(
-        "https://localhost:7048/api/Order/vnpay-payment-url",
+        "https://cozastore.tryasp.net/api/Order/vnpay-payment-url",
         data
       );
       window.location.href = response.data;
@@ -337,7 +337,7 @@ const GioHang: React.FC = () => {
       
 
       const response = await axios.post(
-        "https://localhost:7048/api/Email/send-email",
+        "https://cozastore.tryasp.net/api/Email/send-email",
         EmailRequest
       );
 
@@ -357,7 +357,7 @@ const GioHang: React.FC = () => {
           orderId,
         };
         return axios.post(
-          "https://localhost:7048/api/DetailOrder/add-detailorder",
+          "https://cozastore.tryasp.net/api/DetailOrder/add-detailorder",
           orderDetail
         );
       });
@@ -483,7 +483,7 @@ const GioHang: React.FC = () => {
                               <div className="row">
                                 <div className="col-4">
                                   <img
-                                    src={`https://localhost:7048/${item.link}`}
+                                    src={`https://cozastore.tryasp.net/${item.link}`}
                                     className="cart-thumb"
                                     alt=""
                                     style={{

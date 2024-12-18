@@ -92,7 +92,7 @@ const Cart: React.FC = () => {
       };
 
       const response = await axios.post(
-        "https://localhost:7048/api/Order/add-order",
+        "https://cozastore.tryasp.net/api/Order/add-order",
         newOrder
       );
       
@@ -120,7 +120,7 @@ const Cart: React.FC = () => {
         };
 
         return axios.post(
-          "https://localhost:7048/api/DetailOrder/add-detailorder",
+          "https://cozastore.tryasp.net/api/DetailOrder/add-detailorder",
           orderDetail
         );
       });
