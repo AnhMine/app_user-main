@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // DTO for Media
 interface MediaDTO {
   isPrimary: boolean;
