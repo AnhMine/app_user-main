@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Index = () => {
+const   Index = () => {
   const navigate = useNavigate();
 
   const changeRouter = (id: number) => {

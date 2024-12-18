@@ -22,57 +22,22 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
-      {
-        path: "/",
-        element: <Index />,
-      },
-      {
-        path: "/blog",
-        element: <Blog />,
-      },
-      {
-        path: "/detail-blog/:id",
-        element: <DetalBlog />,
-      },
-      {
-        path: "/detail/:id",
-        element: <Chitiet />,
-      },
-      {
-        path: "/login",
-        element: <Login />,
-      },
-      {
-        path: "/sanpham",
-        element: <SanPham />,
-      },
-      {
-        path: "/donhang",
-        element: <DonHang />,
-      },
-      {
-        path: "/thanhtoan",
-        element: <ThanhToan />,
-      },
-      {
-        path: "/cart",
-        element: <CartPro />,
-      },
-      {
-        path: "/TrangCaNhan/:id", // Tham số động `id`
-        element: <Information />,
-      },
-      {
-        path: "/Cart",
-        element: <Cart />,
-      },
-      {
-        path: "/QrQr",
-        element: <QrQr />,
-      },
+      { path: "/", element: <Index /> },
+      { path: "/blog", element: <Blog /> },
+      { path: "/detail-blog/:id", element: <DetalBlog /> },
+      { path: "/detail/:id", element: <Chitiet /> },
+      { path: "/login", element: <Login /> },
+      { path: "/sanpham", element: <SanPham /> },
+      { path: "/donhang", element: <DonHang /> },
+      { path: "/thanhtoan", element: <ThanhToan /> },
+      { path: "/cart-pro", element: <CartPro /> },
+      { path: "/profile/:id", element: <Information /> },
+      { path: "/cart", element: <Cart /> },
+      { path: "/qr", element: <QrQr /> },
     ],
   },
 ]);
+
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
