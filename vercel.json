@@ -6,7 +6,7 @@
     { "source": "/(.*)", "destination": "/" }
   ],
   "public": "public",
-  "src": "src/assets/js/*"
+  "src": "src/*"
 
   
 }
